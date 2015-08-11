@@ -1,0 +1,294 @@
+.my{
+	width: 113px;
+	height: 113px;
+    float: left;
+    padding-right: 10px;
+}
+.mydiv{
+	  width: 689px;
+	  height:106px;
+}
+.someClass{
+	max-height:106px;
+	max-width:106px;
+}
+.mycontent {
+    border-top: none;
+   
+}
+.btn-success {
+  color: #fff;
+  background-color: #6EA9D5;
+  border-color: #4cae4c;
+    cursor: pointer;	
+}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.form-group {
+    margin-bottom: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: left;
+}
+.form-control {
+    display: block;
+    width: 440px;
+    height: 18px;
+    padding: 6px 7px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #a7aeb5;
+    border-radius: 5px;
+}
+.form-control-desc{
+	display: block;
+    width: 440px;
+    height: 220px;
+    padding: 6px 7px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #a7aeb5;
+    border-radius: 5px;
+}
+.form-control-number{
+	display: block;
+    width: 160px;
+    height: 18px;
+    padding: 6px 7px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #a7aeb5;
+    border-radius: 5px;
+}
+.form-control-drop{
+	display: block;
+    width: 455px;
+    height: 33px;
+    padding: 6px 7px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #a7aeb5;
+    border-radius: 5px;
+}
+.control-label { 
+	
+    vertical-align: middle; 
+    width: 94px;
+    float: left;
+    padding-top: 10px;
+    padding-right: 15px;
+    font-size: 15px !important;
+}
+.control-label-top{
+    vertical-align: middle; 
+    width: 32px;
+    padding-top: 3px;
+    float: left;
+    padding-right: 15px;
+    font-size: 15px !important;
+}
+.form-control-top{
+    display: block;
+    width: 20px;
+    height: 18px;
+    padding: 6px 7px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #a7aeb5;
+    border-radius: 5px;
+}
+.prof .leb{
+    display: inline-block;
+    vertical-align: top;
+}
+.myview{
+	width: 400px;
+	height: 400px;
+	padding-right: 10px;
+	float: left;
+}
+.pic{
+	width: 400px;
+	height: 400px;
+}
+.inf{
+	width: 490px;
+	height: 400px;
+	float:left;
+}
+.infm{
+	padding-bottom: 6px;
+    font-size: 20px;
+    color: rgb(119, 112, 112);
+    padding-left: 20px;
+}
+.inftitle{
+	padding-bottom: 12px;
+    font-size: 20px;
+    color: rgb(119, 112, 112);
+    padding-left: 20px;
+}
+.descr{
+	font-size: 19px;
+    color: rgb(113, 112, 111);
+    padding-left: 20px;
+    padding-top: 10px;
+    float: left;
+}
+.mydate{
+	position: absolute;
+	margin-left: 763px;
+	margin-top: 64px;
+}
+.myprice{
+	position: absolute;
+	margin-left: 123px;
+	margin-top: 64px;
+}
+.btn_my{
+	display: inline-block;
+     padding: 2px 11px;
+   margin-bottom: 0;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    text-decoration: none!important;
+	border-color: rgb(214, 216, 216);
+	background-color: rgb(216, 218, 229);
+    color: aliceblue;
+}
+.mytitle{
+	margin-top: 7px;
+}
+.mydiv b{
+	color: rgb(35, 174, 199) !important;
+}
+.position{
+    position: absolute;
+    margin-left: 806px;
+    text-decoration: blink;
+}
+.delete{
+    margin-left: 732px;
+    position: absolute;
+    background-color: #EC1F24;
+    text-decoration: blink;
+}
+.cont{
+    width: 900px;
+    height: 181px;
+    border: 1px solid #899196;
+    margin-bottom: 8px;
+}
+.cont1{
+    width: 900px;
+    height: 50px;
+    border: 1px solid #899196;
+    margin-bottom: 8px;
+}
+.wid{
+    width: 180px;
+    float: left;
+}
+.lebphone{
+    margin-left: 201px;
+    margin-top: -7px;
+}
+.lebloc{
+    margin-top: 8px;
+}
+.let{
+    margin-left: 421px;
+}
+/*------------------------------------------------------------------*/
+
+.block1{
+    float: left;
+    width: 118px;
+    height: 180px;
+    padding-left: 10px;
+}
+#logo{    
+    color: #53A2B5;
+}
+
+.img{
+    width: 113px;
+    height: 118px;
+    padding-top: 10px;
+    display: block;
+    vertical-align: middle;
+}
+.bold{
+	color: #000;
+	font-weight: bold;
+}
+.price_red{
+	color: #d61111;
+	font-size: 14px;
+}
+.border{
+	border: 1px solid #d9d9db;
+	height: 198px;
+	width: 1000px;
+}
+.top{
+	width: 1002px;
+	height: 28px;
+	background-color: rgb(134, 134, 134);
+}
+button{
+	cursor: pointer;
+	height: 20px;
+	width: 20px;
+	background-color: rgb(207, 0, 0);
+	color: aliceblue;
+	border: 1px solid #CF0000;
+	border-radius: 7px;
+}
+.bat{
+	  float: right;
+  padding-right: 15px;
+  padding-top: 4px;
+}
