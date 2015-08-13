@@ -126,7 +126,7 @@ class InformationController extends Controller
                             unlink(Yii::app()->basePath.'/../banner/'.$oldimage);
                         }
                     }
-
+                    $model->description = nl2br($_POST['Information']['description']);
                     if($model->save()){                            
                         if($uploadedFile){
                             $uploadedFile->saveAs(Yii::app()->basePath.'/../banner/'.$fileName);  // image will uplode to rootDirectory/banner/                                
@@ -225,26 +225,26 @@ class InformationController extends Controller
             $criteria = new CDbCriteria;
             $criteria->compare('top','1',true);
             $model = Information::model()->findAll($criteria);
-            $model1 = new Information;
-            if(isset($_POST)){
-                $phone = Phone::model()->findByPk($_POST['phone']);
-                $location = Location::model()->findByPk($_POST['location']);
-                var_dump($_POST);exit;
-                $criteria = new CDbCriteria;
-                $criteria1 = new CDbCriteria;
-                $criteria->compare('phone',$phone->phone,true);
-                $criteria1->compare('location',$location->location,true);
-                
-                $model1 = Information::model()->findAll($criteria, $criteria1);
-                
+            $id = array();
+            $i= 0;
+            foreach ($model as $value){
+                $id[$i] = $value->id;
+                $i++;
             }
-            
-            
+            $limit = 5;
+            if(count($id) > $limit)
+            {
+                shuffle($id);
+                $id = array_slice($id, 0, $limit);
+            }
 
+            $criteria1 = new CDbCriteria();
+            $criteria1->addInCondition('id', $id);
+            $model1 = Information::model()->findAll($criteria1, array('top','1',true));
+            
             $this->render('index',array(
                 'dataProvider'=>$dataProvider,
-                'model'=>$model,
-                'model1'=>$model1,
+                'model'=>$model1,
             ));
 	}
         

@@ -8,6 +8,11 @@
 	  width: 689px;
 	  height:106px;
 }
+.someClass1{
+	max-height:158px;
+	max-width:158px;
+        vertical-align: middle;
+}
 .someClass{
 	max-height:106px;
 	max-width:106px;
@@ -198,6 +203,28 @@
 	background-color: rgb(216, 218, 229);
     color: aliceblue;
 }
+.pad{
+    padding: 0px !important;
+}
+.btn_my_marc{
+    width: 156px;
+    display: inline-block;
+    font-weight: normal;
+    line-height: 1.42857143;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    text-decoration: none!important;
+    border-color: rgb(214, 216, 216);
+    background-color: rgb(216, 218, 229);
+    color: aliceblue;
+}
 .mytitle{
 	margin-top: 7px;
 }
@@ -217,7 +244,7 @@
 }
 .cont{
     width: 900px;
-    height: 181px;
+    height: 210px;
     border: 1px solid #899196;
     margin-bottom: 8px;
 }
@@ -245,8 +272,8 @@
 
 .block1{
     float: left;
-    width: 118px;
-    height: 180px;
+    width: 170px;
+    height: 210px;
     padding-left: 10px;
 }
 #logo{    
@@ -254,19 +281,22 @@
 }
 
 .img{
-    width: 113px;
-    height: 118px;
+    width: 161px;
+    height: 161px;
     padding-top: 10px;
     display: block;
-    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
 }
 .bold{
 	color: #000;
 	font-weight: bold;
 }
 .price_red{
-	color: #d61111;
-	font-size: 14px;
+    color: #d61111;
+    font-size: 14px;
+    float: right;
+    padding-right: 12px;
 }
 .border{
 	border: 1px solid #d9d9db;
@@ -291,4 +321,9 @@ button{
 	  float: right;
   padding-right: 15px;
   padding-top: 4px;
+}
+.helper2{
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 }
