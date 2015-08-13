@@ -33,8 +33,8 @@ class Information extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('full_name, price, title, description, email, number', 'required'),
-			array('number', 'numerical', 'integerOnly'=>true),
-			array('full_name, top, phone, price, location, title, time, email', 'length', 'max'=>256, 'on'=>'insert,update'),
+			array('number, price', 'numerical', 'integerOnly'=>true),
+			array('full_name, top, phone, location, title, time, email', 'length', 'max'=>256, 'on'=>'insert,update'),
 			// @todo Please remove those attributes that should not be searched.
                         array('image', 'file','types'=>'jpg, gif, png', 'allowEmpty'=>true, 'on'=>'update', 'safe' => false),
                         array('image', 'unsafe'),
