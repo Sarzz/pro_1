@@ -26,6 +26,7 @@
 	<div class="infm">Phone number: <?php echo $model->number; ?></div>
 	<div class="infm">Location: <?php echo $model->location; ?></div>
 	<div class="infm">Phone model: <?php echo $model->phone; ?></div>
+        <div class="infm">Price: <?php echo $model->price; ?> AMD</div>
     <div class="infm">Email: <?php echo $model->email; ?></div>
 </div>
 	<div class="descr"><?php echo $model->description; ?></div>
