@@ -84,7 +84,7 @@ class InformationController extends Controller
                     $model->location = $location->location;
                     
 
-                    $model->description = nl2br($_POST['Information']['description']);
+                    $model->description = str_replace("\r\n","<br />",$_POST['Information']['description']);
 
                     $t=time();
                     $model->time=date("Y-m-d",$t); 
@@ -108,46 +108,9 @@ class InformationController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
-                $oldimage = $model->image;
-//                var_dump($image);exit;
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Information']))
-		{
-                    $rnd = rand(0,9999);
-                    $model->attributes=$_POST['Information'];
-                    $uploadedFile=CUploadedFile::getInstance($model,'image');
-                    if($uploadedFile){
-                        $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
-                        $model->image = $fileName;
-                        if($oldimage){
-                            unlink(Yii::app()->basePath.'/../banner/'.$oldimage);
-                        }
-                    }
-//                    $model->description = nl2br($_POST['Information']['description']);
-                    if($model->save()){                            
-                        if($uploadedFile){
-                            $uploadedFile->saveAs(Yii::app()->basePath.'/../banner/'.$fileName);  // image will uplode to rootDirectory/banner/                                
-                        }
-                        $this->redirect(array('view','id'=>$model->id));
-                    }
-		}
-
-		$this->render('update',array(
-			'model'=>$model,
-		));
-	}
-        
-        public function actionAdminUpdate($id)
-	{
             $model=$this->loadModel($id);
+            $model->description = str_replace("<br />","\n",$model->description );
             $oldimage = $model->image;
-
-            // Uncomment the following line if AJAX validation is needed
-            // $this->performAjaxValidation($model);
-
             if(isset($_POST['Information']))
             {
                 $rnd = rand(0,9999);
@@ -160,7 +123,40 @@ class InformationController extends Controller
                         unlink(Yii::app()->basePath.'/../banner/'.$oldimage);
                     }
                 }
-                    
+                $content = $_POST['Information']['description'];
+                $model->description = str_replace("\n","<br />",$content);
+                if($model->save()){                            
+                    if($uploadedFile){
+                        $uploadedFile->saveAs(Yii::app()->basePath.'/../banner/'.$fileName);  // image will uplode to rootDirectory/banner/                                
+                    }
+                    $this->redirect(array('view','id'=>$model->id));
+                }
+            }
+
+            $this->render('update',array(
+                    'model'=>$model,
+            ));
+	}
+        
+        public function actionAdminUpdate($id)
+	{
+            $model=$this->loadModel($id);
+            $model->description = str_replace("<br />","\n",$model->description );
+            $oldimage = $model->image;
+            if(isset($_POST['Information']))
+            {
+                $rnd = rand(0,9999);
+                $model->attributes=$_POST['Information'];
+                $uploadedFile=CUploadedFile::getInstance($model,'image');
+                if($uploadedFile){
+                    $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
+                    $model->image = $fileName;
+                    if($oldimage){
+                        unlink(Yii::app()->basePath.'/../banner/'.$oldimage);
+                    }
+                }
+                $content = $_POST['Information']['description'];
+                $model->description = str_replace("\n","<br />",$content);
                 if($model->save()) {
                     // check if uploaded file is set or not
                     if($uploadedFile){
@@ -169,9 +165,6 @@ class InformationController extends Controller
                     $this->redirect(array('view','id'=>$model->id));
                 }
             }
-            
-            //var_dump($model); exit;
-
             $this->render('admin_update',array(
                 'model'=>$model,
             ));
@@ -225,6 +218,7 @@ class InformationController extends Controller
             $criteria = new CDbCriteria;
             $criteria->compare('top','1',true);
             $model = Information::model()->findAll($criteria);
+            
             $id = array();
             $i= 0;
             foreach ($model as $value){

@@ -14,6 +14,7 @@
  */
 class Users extends CActiveRecord
 {
+    public $verifyCode;
 	/**
 	 * @return string the associated database table name
 	 */
@@ -27,18 +28,15 @@ class Users extends CActiveRecord
 	 */
 	public function rules()
 	{
-		// NOTE: you should only define rules for those attributes that
-		// will receive user inputs.
-		return array(            
-			array('username, password, full_name, email', 'required'),
-			array('number', 'numerical', 'integerOnly'=>true),
-                        array('email','email'),
-			array('username, password, full_name, email, location', 'length', 'max'=>255),
-                        array('username , email', 'unique'),
-			// The following rule is used by search().
-			// @todo Please remove those attributes that should not be searched.
-			array('id, username, password, full_name, number, email, location', 'safe', 'on'=>'search'),
-		);
+            return array(            
+                    array('username, password, full_name, email', 'required'),
+                    array('number', 'numerical', 'integerOnly'=>true),
+                    array('email','email'),
+                    array('username, password, full_name, email, location', 'length', 'max'=>255),
+                    array('username , email', 'unique'),
+                    array('verifyCode', 'captcha', 'allowEmpty'=>!CCaptcha::checkRequirements()),
+                    array('id, username, password, full_name, number, email, location', 'safe', 'on'=>'search'),
+            );
 	}
 
 	/**
@@ -59,12 +57,12 @@ class Users extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'username' => 'Username',
-			'password' => 'Password',
-			'full_name' => 'Full Name',
-			'location' => 'Location',
-			'number' => 'Number',
-                        'email' => 'Email'
+			'username' => 'Գախտնի Անուն',
+			'password' => 'Գախտնաբառ',
+			'full_name' => 'Անուն Ազգանուն',
+			'location' => 'Տարածաշրջան',
+			'number' => 'Հեռախոս',
+                        'email' => 'Էլեկտրոնային հասցե'
 		);
 	}
 

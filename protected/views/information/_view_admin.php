@@ -5,14 +5,14 @@
 ?>
 
 <div class="view">
-<?php echo CHtml::link('Update', array('information/adminupdate', 'id'=>$data->id),array('class'=>'btn btn-success position')); ?>
-<?php echo CHtml::link('Delete', array('information/delete', 'id'=>$data->id),
+<?php echo CHtml::link('Փոփոխել', array('information/adminupdate', 'id'=>$data->id),array('class'=>'btn btn-success position')); ?>
+<?php echo CHtml::link('Ջնջել', array('information/delete', 'id'=>$data->id),
 array(
     'submit'=>array('information/delete', 'id'=>$data->id),
     'class' => 'btn btn-success delete'
   )
 ); ?>
-	<div class = "my">
+	<div class = "my"><span class="helper2"></span>
 		<?php 
 		if($data->image){ 
 			echo CHtml::link(CHtml::image(Yii::app()->baseUrl."/banner/".$data->image,$data->image, array(
@@ -32,7 +32,6 @@ array(
 		
 
 		<div class="mytitle">
-		<b><?php echo CHtml::encode($data->getAttributeLabel('title')); ?>:</b>
 		<?php echo CHtml::link(CHtml::encode($data->title), array('view', 'id'=>$data->id), array('class'=>'btn_my')); ?>
 		</div>
 

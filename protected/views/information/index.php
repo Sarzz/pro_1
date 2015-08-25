@@ -1,12 +1,11 @@
 <?php
 /* @var $this InformationController */
 /* @var $dataProvider CActiveDataProvider */
-//var_dump($model);exit;
 ?>
-<h1>Informations</h1>
 <div class ="cont">
     <?php
     foreach ($model as $value){ 
+//        var_dump( strlen($value->title));exit;
     ?>
         <div class="block1" id="we">
             <div class="img"><span class="helper2"></span>
@@ -23,8 +22,11 @@
 
                     ?>
             </div>
+            <?php if(strlen($value->title) > 22){ ?>
              <marquee scrollamount="3" direction="right" onmouseover=this.stop() onmouseout=this.start() class="btn_my_marc"><?php echo CHtml::link(CHtml::encode($value->title), array('view', 'id'=>$value->id), array('class'=>'btn_my pad')); ?></marquee>
-             
+            <?php }else{
+                echo CHtml::link(CHtml::encode($value->title), array('view', 'id'=>$value->id), array('class'=>'btn_my1')); 
+            }  ?>
             <div>
             <span id="date_0"  class="bold"><?php echo CHtml::encode($value->time, array('size'=>10)); ?></span>
             <span id="price_0" class="price_red"><?php echo CHtml::encode($value->price); ?>AMD</span>

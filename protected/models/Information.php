@@ -64,17 +64,17 @@ class Information extends CActiveRecord
 		return array(
                     'id' => 'ID',
                     'user_id' =>'User Id',
-                    'full_name' => 'Full Name',
-                    'title' => 'Title',
-                    'description' => 'Description',
+                    'full_name' => 'Անուն Ազգանուն',
+                    'title' => 'Վերնագիր',
+                    'description' => 'Նկարագիր',
                     'email' => 'Email',
-                    'number' => 'Number',
-                    'time' => 'Date',
-                    'image' => 'Image',
-                    'phone' => 'Model',
-                    'location' => 'Location',
-                    'price' => 'Price',
-                    'top' => 'Top',
+                    'number' => 'Հեռախոս',
+                    'time' => 'Տեղադրման Ամսաթիվ',
+                    'image' => 'Նկար',
+                    'phone' => 'Մոդել',
+                    'location' => 'Տարածաշրջան',
+                    'price' => 'Գինը',
+                    'top' => 'Թոփ',
                 );
 	}
 

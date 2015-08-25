@@ -1,8 +1,22 @@
+#page{
+    background: white !important;
+}
+#header{
+    border-top: 0px solid #C8CAD5 !important; 
+}
+#sidebar{
+    padding: 0px !important;
+}
 .my{
-	width: 113px;
-	height: 113px;
+    border: 1px solid #C7C7C7;
+    background-color: #EFEFEF;
+    width: 106px;
+    margin-right: 14px;
+    height: 106px;
     float: left;
-    padding-right: 10px;
+    display: block;
+    white-space: nowrap;
+    text-align: center;
 }
 .mydiv{
 	  width: 689px;
@@ -14,8 +28,9 @@
         vertical-align: middle;
 }
 .someClass{
-	max-height:106px;
-	max-width:106px;
+    max-height:106px;
+    max-width:106px;
+    vertical-align: middle;
 }
 .mycontent {
     border-top: none;
@@ -75,7 +90,7 @@
     border-radius: 5px;
 }
 .form-control-number{
-	display: block;
+    display: block;
     width: 160px;
     height: 18px;
     padding: 6px 7px;
@@ -88,9 +103,9 @@
     border-radius: 5px;
 }
 .form-control-drop{
-	display: block;
+    display: block;
     width: 455px;
-    height: 33px;
+    height: 35px;
     padding: 6px 7px;
     font-size: 16px;
     line-height: 1.42857143;
@@ -103,7 +118,7 @@
 .control-label { 
 	
     vertical-align: middle; 
-    width: 94px;
+    width: 166px;
     float: left;
     padding-top: 10px;
     padding-right: 15px;
@@ -135,18 +150,24 @@
     vertical-align: top;
 }
 .myview{
-	width: 400px;
-	height: 400px;
-	padding-right: 10px;
-	float: left;
+    border: 1px solid #c7c7c7;
+    background-color: #EFEFEF;
+    width: 400px;
+    height: 400px;
+    margin-right: 8px;
+    float: left;
+    display: block;
+    white-space: nowrap;
+    text-align: center;
 }
 .pic{
-	width: 400px;
-	height: 400px;
+    max-width: 400px;
+    max-height: 400px;
+    vertical-align: middle;
 }
 .inf{
 	width: 490px;
-	height: 400px;
+	height: 402px;
 	float:left;
 }
 .infm{
@@ -169,9 +190,9 @@
     float: left;
 }
 .mydate{
-	position: absolute;
-	margin-left: 763px;
-	margin-top: 64px;
+    position: absolute;
+    margin-left: 666px;
+    margin-top: 72px;
 }
 .myprice{
 	position: absolute;
@@ -203,11 +224,39 @@
 	background-color: rgb(216, 218, 229);
     color: aliceblue;
 }
+.btn_my1{
+    width: 136px;
+    display: inline-block;
+    padding: 2px 11px;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    text-decoration: none!important;
+    border-color: rgb(214, 216, 216);
+    background-color: rgb(216, 218, 229);
+    color: aliceblue;
+}
+
+
 .pad{
     padding: 0px !important;
 }
 .btn_my_marc{
-    width: 156px;
+    width: 158px;
     display: inline-block;
     font-weight: normal;
     line-height: 1.42857143;
@@ -233,12 +282,16 @@
 }
 .position{
     position: absolute;
-    margin-left: 806px;
+    margin-left: 790px;
     text-decoration: blink;
 }
 .delete{
-    margin-left: 732px;
+    margin-left: 715px;
     position: absolute;
+    background-color: #EC1F24;
+    text-decoration: blink;
+}
+.delete1{
     background-color: #EC1F24;
     text-decoration: blink;
 }
@@ -274,29 +327,42 @@
     float: left;
     width: 170px;
     height: 210px;
-    padding-left: 10px;
+    padding-left: 9px;
 }
 #logo{    
     color: #53A2B5;
 }
 
 .img{
-    width: 161px;
-    height: 161px;
-    padding-top: 10px;
+    border: 1px solid #c7c7c7;
+    background-color: #EFEFEF;
+    width: 158px;
+    height: 158px;
+    margin-bottom: 3px;
+    margin-top: 10px;
+    display: block;
+    white-space: nowrap;
+    text-align: center;
+}
+.img1{
+    border: 1px solid #c7c7c7;
+    background-color: #EFEFEF;
+    width: 106px;
+    height: 106px;
     display: block;
     white-space: nowrap;
     text-align: center;
 }
 .bold{
-	color: #000;
-	font-weight: bold;
+    margin-left: 4px;
+    color: #000;
+    font-weight: bold;
 }
 .price_red{
     color: #d61111;
     font-size: 14px;
     float: right;
-    padding-right: 12px;
+    padding-right: 9px;
 }
 .border{
 	border: 1px solid #d9d9db;
@@ -325,5 +391,12 @@ button{
 .helper2{
     display: inline-block;
     height: 100%;
+    margin-left: -4px;
     vertical-align: middle;
+}
+.wi1{
+    width: 950px !important;
+}
+.wi1 h2{
+    color: #24AEC7;
 }

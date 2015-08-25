@@ -5401,3 +5401,472 @@ in C:\web_projects\pro_1\index.php (13)
 2015/08/13 14:42:42 [warning] [application] Failed to set unsafe attribute "image" of "Information".
 in C:\web_projects\pro_1\protected\controllers\InformationController.php (67)
 in C:\web_projects\pro_1\index.php (13)
+2015/08/14 08:02:54 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (120)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/14 08:03:55 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (120)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/14 08:06:02 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (120)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/14 08:06:50 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (120)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/14 08:09:56 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (120)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/14 08:11:06 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (120)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/14 08:12:35 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (120)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/14 08:13:51 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (67)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/14 08:16:53 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (67)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/14 08:19:41 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (120)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/14 08:20:49 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (120)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/14 08:21:19 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (120)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/14 09:04:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "captcha".' in C:\web_projects\pro_1\framework\web\CController.php:483
+Stack trace:
+#0 C:\web_projects\pro_1\framework\web\CController.php(270): CController->missingAction('captcha')
+#1 C:\web_projects\pro_1\framework\web\CWebApplication.php(282): CController->run('captcha')
+#2 C:\web_projects\pro_1\framework\web\CWebApplication.php(141): CWebApplication->runController('site/captcha')
+#3 C:\web_projects\pro_1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\web_projects\pro_1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/site/captcha?v=55cd931338458
+HTTP_REFERER=http://heraxosner.am/index.php/site/users
+---
+2015/08/14 09:05:15 [error] [exception.CException] exception 'CException' with message 'CCaptchaValidator.action "captcha" is invalid. Unable to find such an action in the current controller.' in C:\web_projects\pro_1\framework\validators\CCaptchaValidator.php:77
+Stack trace:
+#0 C:\web_projects\pro_1\framework\validators\CCaptchaValidator.php(49): CCaptchaValidator->getCaptchaAction()
+#1 C:\web_projects\pro_1\framework\validators\CValidator.php(201): CCaptchaValidator->validateAttribute(Object(Users), 'verifyCode')
+#2 C:\web_projects\pro_1\framework\base\CModel.php(159): CValidator->validate(Object(Users), NULL)
+#3 C:\web_projects\pro_1\framework\db\ar\CActiveRecord.php(808): CModel->validate(NULL)
+#4 C:\web_projects\pro_1\protected\controllers\SiteController.php(28): CActiveRecord->save()
+#5 C:\web_projects\pro_1\framework\web\actions\CInlineAction.php(49): SiteController->actionUsers()
+#6 C:\web_projects\pro_1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\web_projects\pro_1\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\web_projects\pro_1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\web_projects\pro_1\framework\web\CWebApplication.php(282): CController->run('users')
+#10 C:\web_projects\pro_1\framework\web\CWebApplication.php(141): CWebApplication->runController('site/users')
+#11 C:\web_projects\pro_1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#12 C:\web_projects\pro_1\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/index.php/site/users
+HTTP_REFERER=http://heraxosner.am/index.php/site/users
+---
+2015/08/14 09:07:13 [error] [php] Trying to get property of non-object (C:\web_projects\pro_1\protected\controllers\SiteController.php:32)
+Stack trace:
+#0 C:\web_projects\pro_1\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\web_projects\pro_1\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\web_projects\pro_1\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\web_projects\pro_1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\web_projects\pro_1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#5 C:\web_projects\pro_1\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/site/users
+in C:\web_projects\pro_1\protected\controllers\SiteController.php (32)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/14 11:57:01 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (67)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/14 13:15:23 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (67)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/14 13:16:33 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (67)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/14 13:17:03 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (67)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/14 13:18:42 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (67)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/14 13:21:17 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (67)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/14 13:22:16 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (67)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/14 13:22:16 [error] [exception.CException] exception 'CException' with message 'Property "InformationController._name" is not defined.' in C:\web_projects\pro_1\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\web_projects\pro_1\framework\web\CUploadedFile.php(213): CComponent->__get('_name')
+#1 C:\web_projects\pro_1\protected\controllers\InformationController.php(70): CUploadedFile->getName(Object(Information), 'image')
+#2 C:\web_projects\pro_1\framework\web\actions\CInlineAction.php(49): InformationController->actionCreate()
+#3 C:\web_projects\pro_1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\web_projects\pro_1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\web_projects\pro_1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\web_projects\pro_1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\web_projects\pro_1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\web_projects\pro_1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\web_projects\pro_1\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\web_projects\pro_1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\web_projects\pro_1\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\web_projects\pro_1\framework\web\CWebApplication.php(141): CWebApplication->runController('information/cre...')
+#13 C:\web_projects\pro_1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#14 C:\web_projects\pro_1\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php/information/create
+HTTP_REFERER=http://heraxosner.am/index.php/information/create
+---
+2015/08/17 08:17:15 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (67)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/17 08:18:03 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (67)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/17 12:53:30 [error] [exception.CException] exception 'CException' with message 'Property "Information.descriprion" is not defined.' in C:\web_projects\pro_1\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\web_projects\pro_1\framework\db\ar\CActiveRecord.php(145): CComponent->__get('descriprion')
+#1 C:\web_projects\pro_1\protected\controllers\InformationController.php(296): CActiveRecord->__get('descriprion')
+#2 C:\web_projects\pro_1\protected\controllers\InformationController.php(111): InformationController->loadModel('1')
+#3 [internal function]: InformationController->actionUpdate('1')
+#4 C:\web_projects\pro_1\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(InformationController), Array)
+#5 C:\web_projects\pro_1\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(InformationController), Object(ReflectionMethod), Array)
+#6 C:\web_projects\pro_1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\web_projects\pro_1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\web_projects\pro_1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\web_projects\pro_1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\web_projects\pro_1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\web_projects\pro_1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\web_projects\pro_1\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\web_projects\pro_1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\web_projects\pro_1\framework\web\CWebApplication.php(282): CController->run('update')
+#15 C:\web_projects\pro_1\framework\web\CWebApplication.php(141): CWebApplication->runController('information/upd...')
+#16 C:\web_projects\pro_1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#17 C:\web_projects\pro_1\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/index.php/information/update/1
+HTTP_REFERER=http://heraxosner.am/index.php/information/index
+---
+2015/08/17 12:56:02 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (120)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/17 12:59:42 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (67)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/17 13:01:14 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (120)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/17 13:02:09 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (67)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/17 13:05:08 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (122)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/17 13:10:28 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (117)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/21 10:23:23 [error] [exception.CException] exception 'CException' with message 'Information and its behaviors do not have a method or closure named "getThumb".' in C:\web_projects\pro_1\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\web_projects\pro_1\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getThumb', Array)
+#1 C:\web_projects\pro_1\protected\views\information\_form.php(97): CActiveRecord->__call('getThumb', Array)
+#2 C:\web_projects\pro_1\protected\views\information\_form.php(97): Information->getThumb('210')
+#3 C:\web_projects\pro_1\framework\web\CBaseController.php(126): require('C:\\web_projects...')
+#4 C:\web_projects\pro_1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\web_projects...', Array, true)
+#5 C:\web_projects\pro_1\framework\web\CController.php(869): CBaseController->renderFile('C:\\web_projects...', Array, true)
+#6 C:\web_projects\pro_1\protected\views\information\create.php(12): CController->renderPartial('_form', Array)
+#7 C:\web_projects\pro_1\framework\web\CBaseController.php(126): require('C:\\web_projects...')
+#8 C:\web_projects\pro_1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\web_projects...', Array, true)
+#9 C:\web_projects\pro_1\framework\web\CController.php(869): CBaseController->renderFile('C:\\web_projects...', Array, true)
+#10 C:\web_projects\pro_1\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#11 C:\web_projects\pro_1\protected\controllers\InformationController.php(101): CController->render('create', Array)
+#12 C:\web_projects\pro_1\framework\web\actions\CInlineAction.php(49): InformationController->actionCreate()
+#13 C:\web_projects\pro_1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\web_projects\pro_1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 C:\web_projects\pro_1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\web_projects\pro_1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 C:\web_projects\pro_1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\web_projects\pro_1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\web_projects\pro_1\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\web_projects\pro_1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\web_projects\pro_1\framework\web\CWebApplication.php(282): CController->run('create')
+#22 C:\web_projects\pro_1\framework\web\CWebApplication.php(141): CWebApplication->runController('information/cre...')
+#23 C:\web_projects\pro_1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#24 C:\web_projects\pro_1\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/index.php/information/create
+HTTP_REFERER=http://heraxosner.am/index.php/information/all
+---
+2015/08/21 10:24:44 [error] [exception.CException] exception 'CException' with message 'Information and its behaviors do not have a method or closure named "getThumb".' in C:\web_projects\pro_1\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\web_projects\pro_1\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getThumb', Array)
+#1 C:\web_projects\pro_1\protected\views\information\_form.php(97): CActiveRecord->__call('getThumb', Array)
+#2 C:\web_projects\pro_1\protected\views\information\_form.php(97): Information->getThumb('210')
+#3 C:\web_projects\pro_1\framework\web\CBaseController.php(126): require('C:\\web_projects...')
+#4 C:\web_projects\pro_1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\web_projects...', Array, true)
+#5 C:\web_projects\pro_1\framework\web\CController.php(869): CBaseController->renderFile('C:\\web_projects...', Array, true)
+#6 C:\web_projects\pro_1\protected\views\information\create.php(12): CController->renderPartial('_form', Array)
+#7 C:\web_projects\pro_1\framework\web\CBaseController.php(126): require('C:\\web_projects...')
+#8 C:\web_projects\pro_1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\web_projects...', Array, true)
+#9 C:\web_projects\pro_1\framework\web\CController.php(869): CBaseController->renderFile('C:\\web_projects...', Array, true)
+#10 C:\web_projects\pro_1\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#11 C:\web_projects\pro_1\protected\controllers\InformationController.php(101): CController->render('create', Array)
+#12 C:\web_projects\pro_1\framework\web\actions\CInlineAction.php(49): InformationController->actionCreate()
+#13 C:\web_projects\pro_1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\web_projects\pro_1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 C:\web_projects\pro_1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\web_projects\pro_1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 C:\web_projects\pro_1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\web_projects\pro_1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\web_projects\pro_1\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\web_projects\pro_1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\web_projects\pro_1\framework\web\CWebApplication.php(282): CController->run('create')
+#22 C:\web_projects\pro_1\framework\web\CWebApplication.php(141): CWebApplication->runController('information/cre...')
+#23 C:\web_projects\pro_1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#24 C:\web_projects\pro_1\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/index.php/information/create
+HTTP_REFERER=http://heraxosner.am/index.php/information/all
+---
+2015/08/21 10:24:44 [error] [exception.CException] exception 'CException' with message 'Information and its behaviors do not have a method or closure named "getThumb".' in C:\web_projects\pro_1\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\web_projects\pro_1\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getThumb', Array)
+#1 C:\web_projects\pro_1\protected\views\information\_form.php(97): CActiveRecord->__call('getThumb', Array)
+#2 C:\web_projects\pro_1\protected\views\information\_form.php(97): Information->getThumb('210')
+#3 C:\web_projects\pro_1\framework\web\CBaseController.php(126): require('C:\\web_projects...')
+#4 C:\web_projects\pro_1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\web_projects...', Array, true)
+#5 C:\web_projects\pro_1\framework\web\CController.php(869): CBaseController->renderFile('C:\\web_projects...', Array, true)
+#6 C:\web_projects\pro_1\protected\views\information\create.php(12): CController->renderPartial('_form', Array)
+#7 C:\web_projects\pro_1\framework\web\CBaseController.php(126): require('C:\\web_projects...')
+#8 C:\web_projects\pro_1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\web_projects...', Array, true)
+#9 C:\web_projects\pro_1\framework\web\CController.php(869): CBaseController->renderFile('C:\\web_projects...', Array, true)
+#10 C:\web_projects\pro_1\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#11 C:\web_projects\pro_1\protected\controllers\InformationController.php(101): CController->render('create', Array)
+#12 C:\web_projects\pro_1\framework\web\actions\CInlineAction.php(49): InformationController->actionCreate()
+#13 C:\web_projects\pro_1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\web_projects\pro_1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 C:\web_projects\pro_1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\web_projects\pro_1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 C:\web_projects\pro_1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\web_projects\pro_1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\web_projects\pro_1\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\web_projects\pro_1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\web_projects\pro_1\framework\web\CWebApplication.php(282): CController->run('create')
+#22 C:\web_projects\pro_1\framework\web\CWebApplication.php(141): CWebApplication->runController('information/cre...')
+#23 C:\web_projects\pro_1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#24 C:\web_projects\pro_1\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/index.php/information/create
+HTTP_REFERER=http://heraxosner.am/index.php/information/all
+---
+2015/08/21 10:24:45 [error] [exception.CException] exception 'CException' with message 'Information and its behaviors do not have a method or closure named "getThumb".' in C:\web_projects\pro_1\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\web_projects\pro_1\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getThumb', Array)
+#1 C:\web_projects\pro_1\protected\views\information\_form.php(97): CActiveRecord->__call('getThumb', Array)
+#2 C:\web_projects\pro_1\protected\views\information\_form.php(97): Information->getThumb('210')
+#3 C:\web_projects\pro_1\framework\web\CBaseController.php(126): require('C:\\web_projects...')
+#4 C:\web_projects\pro_1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\web_projects...', Array, true)
+#5 C:\web_projects\pro_1\framework\web\CController.php(869): CBaseController->renderFile('C:\\web_projects...', Array, true)
+#6 C:\web_projects\pro_1\protected\views\information\create.php(12): CController->renderPartial('_form', Array)
+#7 C:\web_projects\pro_1\framework\web\CBaseController.php(126): require('C:\\web_projects...')
+#8 C:\web_projects\pro_1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\web_projects...', Array, true)
+#9 C:\web_projects\pro_1\framework\web\CController.php(869): CBaseController->renderFile('C:\\web_projects...', Array, true)
+#10 C:\web_projects\pro_1\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#11 C:\web_projects\pro_1\protected\controllers\InformationController.php(101): CController->render('create', Array)
+#12 C:\web_projects\pro_1\framework\web\actions\CInlineAction.php(49): InformationController->actionCreate()
+#13 C:\web_projects\pro_1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\web_projects\pro_1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 C:\web_projects\pro_1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\web_projects\pro_1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 C:\web_projects\pro_1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\web_projects\pro_1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\web_projects\pro_1\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\web_projects\pro_1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\web_projects\pro_1\framework\web\CWebApplication.php(282): CController->run('create')
+#22 C:\web_projects\pro_1\framework\web\CWebApplication.php(141): CWebApplication->runController('information/cre...')
+#23 C:\web_projects\pro_1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#24 C:\web_projects\pro_1\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/index.php/information/create
+HTTP_REFERER=http://heraxosner.am/index.php/information/all
+---
+2015/08/21 10:24:45 [error] [exception.CException] exception 'CException' with message 'Information and its behaviors do not have a method or closure named "getThumb".' in C:\web_projects\pro_1\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\web_projects\pro_1\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getThumb', Array)
+#1 C:\web_projects\pro_1\protected\views\information\_form.php(97): CActiveRecord->__call('getThumb', Array)
+#2 C:\web_projects\pro_1\protected\views\information\_form.php(97): Information->getThumb('210')
+#3 C:\web_projects\pro_1\framework\web\CBaseController.php(126): require('C:\\web_projects...')
+#4 C:\web_projects\pro_1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\web_projects...', Array, true)
+#5 C:\web_projects\pro_1\framework\web\CController.php(869): CBaseController->renderFile('C:\\web_projects...', Array, true)
+#6 C:\web_projects\pro_1\protected\views\information\create.php(12): CController->renderPartial('_form', Array)
+#7 C:\web_projects\pro_1\framework\web\CBaseController.php(126): require('C:\\web_projects...')
+#8 C:\web_projects\pro_1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\web_projects...', Array, true)
+#9 C:\web_projects\pro_1\framework\web\CController.php(869): CBaseController->renderFile('C:\\web_projects...', Array, true)
+#10 C:\web_projects\pro_1\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#11 C:\web_projects\pro_1\protected\controllers\InformationController.php(101): CController->render('create', Array)
+#12 C:\web_projects\pro_1\framework\web\actions\CInlineAction.php(49): InformationController->actionCreate()
+#13 C:\web_projects\pro_1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\web_projects\pro_1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 C:\web_projects\pro_1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\web_projects\pro_1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 C:\web_projects\pro_1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\web_projects\pro_1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\web_projects\pro_1\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\web_projects\pro_1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\web_projects\pro_1\framework\web\CWebApplication.php(282): CController->run('create')
+#22 C:\web_projects\pro_1\framework\web\CWebApplication.php(141): CWebApplication->runController('information/cre...')
+#23 C:\web_projects\pro_1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#24 C:\web_projects\pro_1\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/index.php/information/create
+HTTP_REFERER=http://heraxosner.am/index.php/information/all
+---
+2015/08/21 10:25:51 [error] [exception.CException] exception 'CException' with message 'Information and its behaviors do not have a method or closure named "getThumb".' in C:\web_projects\pro_1\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\web_projects\pro_1\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getThumb', Array)
+#1 C:\web_projects\pro_1\protected\views\information\_form.php(97): CActiveRecord->__call('getThumb', Array)
+#2 C:\web_projects\pro_1\protected\views\information\_form.php(97): Information->getThumb('210')
+#3 C:\web_projects\pro_1\framework\web\CBaseController.php(126): require('C:\\web_projects...')
+#4 C:\web_projects\pro_1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\web_projects...', Array, true)
+#5 C:\web_projects\pro_1\framework\web\CController.php(869): CBaseController->renderFile('C:\\web_projects...', Array, true)
+#6 C:\web_projects\pro_1\protected\views\information\create.php(12): CController->renderPartial('_form', Array)
+#7 C:\web_projects\pro_1\framework\web\CBaseController.php(126): require('C:\\web_projects...')
+#8 C:\web_projects\pro_1\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\web_projects...', Array, true)
+#9 C:\web_projects\pro_1\framework\web\CController.php(869): CBaseController->renderFile('C:\\web_projects...', Array, true)
+#10 C:\web_projects\pro_1\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#11 C:\web_projects\pro_1\protected\controllers\InformationController.php(101): CController->render('create', Array)
+#12 C:\web_projects\pro_1\framework\web\actions\CInlineAction.php(49): InformationController->actionCreate()
+#13 C:\web_projects\pro_1\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 C:\web_projects\pro_1\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 C:\web_projects\pro_1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 C:\web_projects\pro_1\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 C:\web_projects\pro_1\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\web_projects\pro_1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\web_projects\pro_1\framework\web\CController.php(291): CFilterChain->run()
+#20 C:\web_projects\pro_1\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\web_projects\pro_1\framework\web\CWebApplication.php(282): CController->run('create')
+#22 C:\web_projects\pro_1\framework\web\CWebApplication.php(141): CWebApplication->runController('information/cre...')
+#23 C:\web_projects\pro_1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#24 C:\web_projects\pro_1\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/index.php/information/create
+HTTP_REFERER=http://heraxosner.am/index.php/information/all
+---
+2015/08/22 12:59:12 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (117)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/22 15:52:07 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (117)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/22 15:52:36 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (117)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/24 09:42:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "[object Object]".' in C:\web_projects\pro_1\framework\web\CController.php:483
+Stack trace:
+#0 C:\web_projects\pro_1\framework\web\CController.php(270): CController->missingAction('[object Object]')
+#1 C:\web_projects\pro_1\framework\web\CWebApplication.php(282): CController->run('[object Object]')
+#2 C:\web_projects\pro_1\framework\web\CWebApplication.php(141): CWebApplication->runController('information/[ob...')
+#3 C:\web_projects\pro_1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\web_projects\pro_1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/information/[object%20Object]
+HTTP_REFERER=http://heraxosner.am/index.php/information/all
+---
+2015/08/24 09:42:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "[object Object]".' in C:\web_projects\pro_1\framework\web\CController.php:483
+Stack trace:
+#0 C:\web_projects\pro_1\framework\web\CController.php(270): CController->missingAction('[object Object]')
+#1 C:\web_projects\pro_1\framework\web\CWebApplication.php(282): CController->run('[object Object]')
+#2 C:\web_projects\pro_1\framework\web\CWebApplication.php(141): CWebApplication->runController('users/[object O...')
+#3 C:\web_projects\pro_1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\web_projects\pro_1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/users/[object%20Object]
+HTTP_REFERER=http://heraxosner.am/index.php/users/index
+---
+2015/08/24 09:42:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "[object Object]".' in C:\web_projects\pro_1\framework\web\CController.php:483
+Stack trace:
+#0 C:\web_projects\pro_1\framework\web\CController.php(270): CController->missingAction('[object Object]')
+#1 C:\web_projects\pro_1\framework\web\CWebApplication.php(282): CController->run('[object Object]')
+#2 C:\web_projects\pro_1\framework\web\CWebApplication.php(141): CWebApplication->runController('information/[ob...')
+#3 C:\web_projects\pro_1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\web_projects\pro_1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/information/[object%20Object]
+HTTP_REFERER=http://heraxosner.am/index.php/information/all
+---
+2015/08/24 09:47:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "server".' in C:\web_projects\pro_1\framework\web\CController.php:483
+Stack trace:
+#0 C:\web_projects\pro_1\framework\web\CController.php(270): CController->missingAction('server')
+#1 C:\web_projects\pro_1\framework\web\CWebApplication.php(282): CController->run('server')
+#2 C:\web_projects\pro_1\framework\web\CWebApplication.php(141): CWebApplication->runController('information/ser...')
+#3 C:\web_projects\pro_1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\web_projects\pro_1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/information/server/php/
+HTTP_REFERER=http://heraxosner.am/index.php/information/create
+---
+2015/08/24 09:52:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "server".' in C:\web_projects\pro_1\framework\web\CController.php:483
+Stack trace:
+#0 C:\web_projects\pro_1\framework\web\CController.php(270): CController->missingAction('server')
+#1 C:\web_projects\pro_1\framework\web\CWebApplication.php(282): CController->run('server')
+#2 C:\web_projects\pro_1\framework\web\CWebApplication.php(141): CWebApplication->runController('information/ser...')
+#3 C:\web_projects\pro_1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\web_projects\pro_1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/information/server/php/
+HTTP_REFERER=http://heraxosner.am/index.php/information/create
+---
+2015/08/24 09:52:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "[object Object]".' in C:\web_projects\pro_1\framework\web\CController.php:483
+Stack trace:
+#0 C:\web_projects\pro_1\framework\web\CController.php(270): CController->missingAction('[object Object]')
+#1 C:\web_projects\pro_1\framework\web\CWebApplication.php(282): CController->run('[object Object]')
+#2 C:\web_projects\pro_1\framework\web\CWebApplication.php(141): CWebApplication->runController('information/[ob...')
+#3 C:\web_projects\pro_1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\web_projects\pro_1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/information/[object%20Object]
+HTTP_REFERER=http://heraxosner.am/index.php/information/all
+---
+2015/08/24 09:53:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "server".' in C:\web_projects\pro_1\framework\web\CController.php:483
+Stack trace:
+#0 C:\web_projects\pro_1\framework\web\CController.php(270): CController->missingAction('server')
+#1 C:\web_projects\pro_1\framework\web\CWebApplication.php(282): CController->run('server')
+#2 C:\web_projects\pro_1\framework\web\CWebApplication.php(141): CWebApplication->runController('information/ser...')
+#3 C:\web_projects\pro_1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\web_projects\pro_1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/information/server/php/
+HTTP_REFERER=http://heraxosner.am/index.php/information/create
+---
+2015/08/24 09:55:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "server".' in C:\web_projects\pro_1\framework\web\CController.php:483
+Stack trace:
+#0 C:\web_projects\pro_1\framework\web\CController.php(270): CController->missingAction('server')
+#1 C:\web_projects\pro_1\framework\web\CWebApplication.php(282): CController->run('server')
+#2 C:\web_projects\pro_1\framework\web\CWebApplication.php(141): CWebApplication->runController('information/ser...')
+#3 C:\web_projects\pro_1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#4 C:\web_projects\pro_1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php/information/server/php/
+HTTP_REFERER=http://heraxosner.am/index.php/information/create
+---
+2015/08/24 10:27:42 [warning] [application] Failed to set unsafe attribute "image" of "Information".
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (67)
+in C:\web_projects\pro_1\index.php (13)
+2015/08/24 10:27:42 [error] [php] Trying to get property of non-object (C:\web_projects\pro_1\protected\controllers\InformationController.php:78)
+Stack trace:
+#0 C:\web_projects\pro_1\framework\web\filters\CFilterChain.php(133): InformationController->runAction()
+#1 C:\web_projects\pro_1\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\web_projects\pro_1\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#3 C:\web_projects\pro_1\framework\web\filters\CInlineFilter.php(58): InformationController->filterAccessControl()
+#4 C:\web_projects\pro_1\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#5 C:\web_projects\pro_1\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\web_projects\pro_1\framework\web\CController.php(265): InformationController->runActionWithFilters()
+#7 C:\web_projects\pro_1\framework\web\CWebApplication.php(282): InformationController->run()
+#8 C:\web_projects\pro_1\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\web_projects\pro_1\framework\base\CApplication.php(184): CWebApplication->processRequest()
+#10 C:\web_projects\pro_1\index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php/information/create
+in C:\web_projects\pro_1\protected\controllers\InformationController.php (78)
+in C:\web_projects\pro_1\index.php (13)

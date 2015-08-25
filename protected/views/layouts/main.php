@@ -15,6 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/jasny-bootstrap/css/jasny-bootstrap.css">
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
@@ -24,21 +25,21 @@
 <div class="container" id="page">
 
 	<div id="header">
-		<div id="logo">PHONES</div>
+		<div id="logo">Հեռախոսներ</div>
 	</div><!-- header -->
 
 	<div id="mainmenu">
 		<?php $this->widget('zii.widgets.CMenu',array(
 			'items'=>array(
-                            array('label'=>'View', 'url'=>array('/information/all')),
-                            array('label'=>'Create', 'url'=>array('/information/create'), 'visible'=>!Yii::app()->user->isGuest),
-                            array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-                            array('label'=>'Registration', 'url'=>array('/site/users'), 'visible'=>Yii::app()->user->isGuest),
-                            array('label'=>'My Information', 'url'=>array('/users/index'), 'visible'=>!Yii::app()->user->isGuest),
-                            array('label'=>'My Announcement', 'url'=>array('/information/index'), 'visible'=>!Yii::app()->user->isGuest),
+                            array('label'=>'Հեռախոսներ', 'url'=>array('/information/all')),
+                            array('label'=>'Ավելացնել', 'url'=>array('/information/create'), 'visible'=>!Yii::app()->user->isGuest),
+                            array('label'=>'Գրանցվել', 'url'=>array('/site/users'), 'visible'=>Yii::app()->user->isGuest),
+                            array('label'=>'Մուտք', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+                            array('label'=>'Իմ մասին', 'url'=>array('/users/index'), 'visible'=>!Yii::app()->user->isGuest),
+                            array('label'=>'Իմ հեռախոսները', 'url'=>array('/information/index'), 'visible'=>!Yii::app()->user->isGuest),
                             array('label'=>'All Information', 'url'=>array('/users/adminall'), 'visible'=>Yii::app()->user->name=="admin"),
                             array('label'=>'All Announcement', 'url'=>array('/information/adminall'), 'visible'=>Yii::app()->user->name=="admin"),
-                            array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+                            array('label'=>'Ելք ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
 	</div><!-- mainmenu -->
@@ -51,6 +52,10 @@
 	<?php echo $content; ?>
 
 </div><!-- page -->
-
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap-fileinput/plupload.full.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap-fileinput/jquery.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/bootstrap-fileinput/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/jasny-bootstrap/js/jasny-bootstrap.js"></script>
+<script type="text/javascript" src="<?php echo Yii::app()->request->baseUrl; ?>/jasny-bootstrap/js/jasny-bootstrap.min.js"></script>
 </body>
 </html>

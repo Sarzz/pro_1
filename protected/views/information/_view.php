@@ -6,7 +6,7 @@
 
 <div class="view">
 
-	<div class = "my">
+	<div class = "my"><span class="helper2"></span>
 		<?php 
 		if($data->image){ 
 			echo CHtml::link(CHtml::image(Yii::app()->baseUrl."/banner/".$data->image,$data->image, array(
@@ -26,7 +26,6 @@
 		
 
 		<div class="mytitle">
-		<b><?php echo CHtml::encode($data->getAttributeLabel('title')); ?>:</b>
 		<?php echo CHtml::link(CHtml::encode($data->title), array('view', 'id'=>$data->id), array('class'=>'btn_my')); ?>
 		</div>
 
@@ -34,7 +33,7 @@
 
 		<div class="myprice">
 		<b><?php echo CHtml::encode($data->getAttributeLabel('price')); ?>:</b>
-		<b><?php echo CHtml::encode($data->price); ?> AMD</b>
+		<b><?php echo CHtml::encode($data->price); ?> Դրամ</b>
 		</div>		
 		<div class="mydate">
 	        <b><?php echo CHtml::encode($data->getAttributeLabel('time')); ?>:</b>
