@@ -64,17 +64,17 @@ class Information extends CActiveRecord
 		return array(
                     'id' => 'ID',
                     'user_id' =>'User Id',
-                    'full_name' => 'Full Name',
-                    'title' => 'Title',
-                    'description' => 'Description',
+                    'full_name' => 'Անուն Ազգանուն',
+                    'title' => 'Վերնագիր',
+                    'description' => 'Նկարագիր',
                     'email' => 'Email',
-                    'number' => 'Number',
-                    'time' => 'Date',
-                    'image' => 'Image',
-                    'phone' => 'Model',
-                    'location' => 'Location',
-                    'price' => 'Price',
-                    'top' => 'Top',
+                    'number' => 'Հեռախոս',
+                    'time' => 'Տեղադրման Ամսաթիվ',
+                    'image' => 'Նկար',
+                    'phone' => 'Մոդել',
+                    'location' => 'Տարածաշրջան',
+                    'price' => 'Գինը',
+                    'top' => 'Թոփ',
                 );
 	}
 
@@ -90,30 +90,30 @@ class Information extends CActiveRecord
 	 * @return CActiveDataProvider the data provider that can return the models
 	 * based on the search/filter conditions.
 	 */
-	public function search()
-	{
-		// @todo Please modify the following code to remove attributes that should not be searched.
-
-		$criteria=new CDbCriteria;
-
-		$criteria->compare('id',$this->id);
-		$criteria->compare('user_id',$this->user_id);
-		$criteria->compare('full_name',$this->full_name,true);
-		$criteria->compare('title',$this->title,true);
-		$criteria->compare('description',$this->description,true);
-		$criteria->compare('email',$this->email,true);
-		$criteria->compare('number',$this->number);
-                $criteria->compare('time',$this->time);
-                $criteria->compare('image',$this->image);
-                $criteria->compare('phone',$this->phone);
-                $criteria->compare('location',$this->location);
-		$criteria->compare('price',$this->price);
-                $criteria->compare('top',$this->top);
-		
-		return new CActiveDataProvider($this, array(
-			'criteria'=>$criteria,
-		));
-	}
+//	public function search()
+//	{
+//		// @todo Please modify the following code to remove attributes that should not be searched.
+//
+//		$criteria=new CDbCriteria;
+//
+//		$criteria->compare('id',$this->id);
+//		$criteria->compare('user_id',$this->user_id);
+//		$criteria->compare('full_name',$this->full_name,true);
+//		$criteria->compare('title',$this->title,true);
+//		$criteria->compare('description',$this->description,true);
+//		$criteria->compare('email',$this->email,true);
+//		$criteria->compare('number',$this->number);
+//                $criteria->compare('time',$this->time);
+//                $criteria->compare('image',$this->image);
+//                $criteria->compare('phone',$this->phone);
+//                $criteria->compare('location',$this->location);
+//		$criteria->compare('price',$this->price);
+//                $criteria->compare('top',$this->top);
+//		
+//		return new CActiveDataProvider($this, array(
+//			'criteria'=>$criteria,
+//		));
+//	}
 
 	/**
 	 * Returns the static model of the specified AR class.

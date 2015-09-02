@@ -28,7 +28,7 @@ class InformationController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('all','view'),
+				'actions'=>array('all','al','view'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -84,7 +84,7 @@ class InformationController extends Controller
                     $model->location = $location->location;
                     
 
-                    $model->description = nl2br($_POST['Information']['description']);
+                    $model->description = str_replace("\r\n","<br />",$_POST['Information']['description']);
 
                     $t=time();
                     $model->time=date("Y-m-d",$t); 
@@ -108,46 +108,9 @@ class InformationController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);
-                $oldimage = $model->image;
-//                var_dump($image);exit;
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
-		if(isset($_POST['Information']))
-		{
-                    $rnd = rand(0,9999);
-                    $model->attributes=$_POST['Information'];
-                    $uploadedFile=CUploadedFile::getInstance($model,'image');
-                    if($uploadedFile){
-                        $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
-                        $model->image = $fileName;
-                        if($oldimage){
-                            unlink(Yii::app()->basePath.'/../banner/'.$oldimage);
-                        }
-                    }
-//                    $model->description = nl2br($_POST['Information']['description']);
-                    if($model->save()){                            
-                        if($uploadedFile){
-                            $uploadedFile->saveAs(Yii::app()->basePath.'/../banner/'.$fileName);  // image will uplode to rootDirectory/banner/                                
-                        }
-                        $this->redirect(array('view','id'=>$model->id));
-                    }
-		}
-
-		$this->render('update',array(
-			'model'=>$model,
-		));
-	}
-        
-        public function actionAdminUpdate($id)
-	{
             $model=$this->loadModel($id);
+            $model->description = str_replace("<br />","\n",$model->description );
             $oldimage = $model->image;
-
-            // Uncomment the following line if AJAX validation is needed
-            // $this->performAjaxValidation($model);
-
             if(isset($_POST['Information']))
             {
                 $rnd = rand(0,9999);
@@ -160,7 +123,40 @@ class InformationController extends Controller
                         unlink(Yii::app()->basePath.'/../banner/'.$oldimage);
                     }
                 }
-                    
+                $content = $_POST['Information']['description'];
+                $model->description = str_replace("\n","<br />",$content);
+                if($model->save()){                            
+                    if($uploadedFile){
+                        $uploadedFile->saveAs(Yii::app()->basePath.'/../banner/'.$fileName);  // image will uplode to rootDirectory/banner/                                
+                    }
+                    $this->redirect(array('view','id'=>$model->id));
+                }
+            }
+
+            $this->render('update',array(
+                    'model'=>$model,
+            ));
+	}
+        
+        public function actionAdminUpdate($id)
+	{
+            $model=$this->loadModel($id);
+            $model->description = str_replace("<br />","\n",$model->description );
+            $oldimage = $model->image;
+            if(isset($_POST['Information']))
+            {
+                $rnd = rand(0,9999);
+                $model->attributes=$_POST['Information'];
+                $uploadedFile=CUploadedFile::getInstance($model,'image');
+                if($uploadedFile){
+                    $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
+                    $model->image = $fileName;
+                    if($oldimage){
+                        unlink(Yii::app()->basePath.'/../banner/'.$oldimage);
+                    }
+                }
+                $content = $_POST['Information']['description'];
+                $model->description = str_replace("\n","<br />",$content);
                 if($model->save()) {
                     // check if uploaded file is set or not
                     if($uploadedFile){
@@ -169,9 +165,6 @@ class InformationController extends Controller
                     $this->redirect(array('view','id'=>$model->id));
                 }
             }
-            
-            //var_dump($model); exit;
-
             $this->render('admin_update',array(
                 'model'=>$model,
             ));
@@ -214,17 +207,10 @@ class InformationController extends Controller
 
 	public function actionAll()
 	{
-            $dataProvider=new CActiveDataProvider('Information', array(
-                'criteria'=>array(
-                'order'=>'id DESC',
-                ),
-                'pagination'=>array(
-                'pageSize'=>15,
-                ),
-            ));
             $criteria = new CDbCriteria;
             $criteria->compare('top','1',true);
             $model = Information::model()->findAll($criteria);
+            
             $id = array();
             $i= 0;
             foreach ($model as $value){
@@ -240,12 +226,99 @@ class InformationController extends Controller
 
             $criteria1 = new CDbCriteria();
             $criteria1->addInCondition('id', $id);
-            $model1 = Information::model()->findAll($criteria1, array('top','1',true));
+            $model1 = Information::model()->findAll($criteria1, array('top','1',true));            
             
-            $this->render('index',array(
-                'dataProvider'=>$dataProvider,
-                'model'=>$model1,
-            ));
+            $model2 = new Information;
+            if(isset($_POST))
+            {
+                if(!$_POST){
+                    $dataProvider=new CActiveDataProvider('Information', array(
+                        'criteria'=>array(
+                        'order'=>'id DESC',
+                        ),
+                        'pagination'=>array(
+                        'pageSize'=>15,
+                        ),
+                    ));
+                    
+                    $this->render('index',array(
+                        'dataProvider'=>$dataProvider,
+                        'model1' => $model1,
+                        'model' =>$model2,
+                    ));
+                }else{
+                    $phone = Phone::model()->findByPk($_POST['phone']);
+                    $criteria2 = new CDbCriteria;
+                    $criteria2->compare('phone',$phone->phone,true);
+                    $model3 = Information::model()->findAll($criteria2);
+//                    echo "<pre>";
+//                    var_dump($model3);exit;
+                    $dataProvider=new CActiveDataProvider(Information::model()->find($criteria2), array(
+                        'criteria'=>array(
+                        'order'=>'id DESC',
+                        ),
+                        'pagination'=>array(
+                        'pageSize'=>15,
+                        ),
+                    ));
+                    $this->render('index',array(
+                        'dataProvider'=>$dataProvider,
+                        'model1' => $model1,
+                        'model' =>$model2,
+                    ));  
+                }
+            }
+	}
+        
+        public function actionAl()
+	{
+            $criteria = new CDbCriteria;
+            $criteria->compare('top','1',true);
+            $model = Information::model()->findAll($criteria);
+            
+            $id = array();
+            $i= 0;
+            foreach ($model as $value){
+                $id[$i] = $value->id;
+                $i++;
+            }
+            $limit = 5;
+            if(count($id) > $limit)
+            {
+                shuffle($id);
+                $id = array_slice($id, 0, $limit);
+            }
+
+            $criteria1 = new CDbCriteria();
+            $criteria1->addInCondition('id', $id);
+            $model1 = Information::model()->findAll($criteria1, array('top','1',true));            
+            
+            $model2 = new Information;
+            if(isset($_POST))
+            {
+                if(!$_POST){
+                    $model3 = Information::model()->findAll();
+                    
+                    $this->render('index_1',array(
+                        'model3'=>$model3,
+                        'model1' => $model1,
+                        'model' =>$model2,
+                    ));
+                }else{
+                    $phone = Phone::model()->findByPk($_POST['phone']);
+                    $criteria2 = new CDbCriteria;
+                    $criteria2->compare('phone',$phone->phone,true);
+                    $model3 = Information::model()->findAll($criteria2);
+//                    echo "<pre>";
+//                    var_dump($model3);exit;
+                    
+                    $this->render('index_1',array(
+                        'model3'=>$model3,
+                        'model1' => $model1,
+                        'model' =>$model2,
+                    ));  
+                }
+            }
 	}
         
         public function actionAdminAll()

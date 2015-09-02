@@ -88,27 +88,26 @@
 		<?php echo $form->textField($model,'number',array('class' => 'form-control-number')); ?>
 		<?php echo $form->error($model,'number'); ?>
 	</div>
-        
-    <div class="row">
-        <?php echo $form->labelEx($model,'image'); ?>
-        <?php echo CHtml::activeFileField($model, 'image'); /* by this we can upload image */ ?>  
-        <?php echo $form->error($model,'image'); ?>
-	</div>
-		
-	<div class="img">
-            <?php 
-		if($model->image){ 
-			echo CHtml::image(Yii::app()->baseUrl."/banner/".$model->image,$model->image, array(
-		    'class' => 'someClass',
-		));
-		}else{
-			echo CHtml::image(Yii::app()->baseUrl."/banner/000.jpg", $model->image , array(
-		    'class' => 'someClass',
-		));
-		}
-		
-		?>
+    
+        <div class="fileinput fileinput-new" data-provides="fileinput">
+            <div class="fileinput-preview thumbnail" data-trigger="fileinput" style="max-width: 200px; max-height: 150px;"></div>
+            <div>
+                <span class="btn btn-default btn-file"><span class="fileinput-new">
+                    <?php echo $form->fileField($model,'image'); ?>
+                    </span>
+                    <span class="fileinput-exists">Փոխել</span>
+                    <input type="file" name="...">
+                </span>
+                <a href="#" class="btn btn-default fileinput-exists delete1" data-dismiss="fileinput">Ջնջել</a>
+            </div>
         </div>
+        
+        
+        
+        <?php echo $form->error($model,'image'); ?>
+    </div>
+
+        
         
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class' => 'btn btn-success')); ?>

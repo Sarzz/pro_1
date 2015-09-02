@@ -11,7 +11,6 @@
     'enableAjaxValidation'=>false,
 )); ?>
 
-    <p class="note">Fields with <span class="required">*</span> are required.</p>
 
     <div class="form-group">
         <?php echo $form->labelEx($model,'username', array('class' => 'control-label')); ?>
@@ -60,10 +59,15 @@
         <?php
                 $records = Location::model()->findAll(array('order' => 'location'));
                 $lis = CHtml::listData($records, 'id','location');
-                echo CHtml::dropDownList('location', null, $lis, array('empty' => 'Select Location', 'class' => 'form-control-drop'));
+                echo CHtml::dropDownList('location', null, $lis, array('empty' => 'Ընտրել տարածաշրջանը', 'class' => 'form-control-drop'));
                 ?>
         </div>
         <?php echo $form->error($model,'location'); ?>
+    </div>
+    <div class="form-group">
+        <?php echo $form->textField($model,'verifyCode'); ?>
+        <?php $this->widget('CCaptcha'); ?>
+        <?php echo $form->error($model,'verifyCode'); ?>
     </div>
 
     <div class="row buttons">

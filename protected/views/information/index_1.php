@@ -1,8 +1,32 @@
 <?php
 /* @var $this InformationController */
-/* @var $data Information */
-
+/* @var $dataProvider CActiveDataProvider */
 ?>
+<div class ="cont">
+    <?php $this->renderPartial('top', array(
+        'model'=>$model1,
+    )); ?>
+</div>
+
+<div>
+<?php $form=$this->beginWidget('CActiveForm', array(
+	'action'=>Yii::app()->createUrl($this->route),
+	'method'=>'post',
+)); ?>
+    <?php
+        $records = Phone::model()->findAll(array('order' => 'phone'));
+        $list = CHtml::listData($records, 'id','phone');
+        echo CHtml::dropDownList('phone', null, $list, array('empty' => 'Select Model', 'class' => 'form-control-drop'));
+    ?>
+    <div class="row buttons">
+        <?php echo CHtml::submitButton('Փնտրել'); ?>
+    </div>
+
+<?php $this->endWidget(); ?>
+</div>
+<?php foreach ($model3 as $data) { 
+//        echo "<pre>";
+//        var_dump($data); exit;   ?>
 
 <div class="view">
 
@@ -46,3 +70,4 @@
 	</div>
 	<!-- </a> -->
 </div>
+<?php } ?>

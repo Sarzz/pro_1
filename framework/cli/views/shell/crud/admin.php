@@ -14,7 +14,7 @@ echo "\$this->breadcrumbs=array(
 	'$label'=>array('index'),
 	'Manage',
 );\n";
-?>
+
 
 $this->menu=array(
 	array('label'=>'List <?php echo $modelClass; ?>', 'url'=>array('index')),

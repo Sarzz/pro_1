@@ -232,7 +232,7 @@ abstract class CBaseListView extends CWidget
 				$start=$end-$count+1;
 			}
 			if(($summaryText=$this->summaryText)===null)
-				$summaryText=Yii::t('zii','Displaying {start}-{end} of 1 result.|Displaying {start}-{end} of {count} results.',$total);
+				$summaryText=Yii::t('zii','Displaying {start}-{end} of 1 result.|Ցուցադրված է {start}-{end}, {count}-ից:',$total);
 			echo strtr($summaryText,array(
 				'{start}'=>$start,
 				'{end}'=>$end,

@@ -3,16 +3,22 @@
 class SiteController extends Controller
 {
 
-	public function actionIndex()
-	{
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$this->redirect('index.php/information/all');
-	}
-
-	/**
-	 * This is the action to handle external exceptions.
-	 */
+    public function actionIndex()
+    {
+            // renders the view file 'protected/views/site/index.php'
+            // using the default layout 'protected/views/layouts/main.php'
+            $this->redirect('index.php/information/all');
+    }
+    public function actions()
+    {
+        return array(
+            // captcha action renders the CAPTCHA image displayed on the contact page
+            'captcha'=>array(
+            'class'=>'CCaptchaAction',
+            'backColor'=>0xFFFFFF,
+            ),
+        );
+    }
 
 	public function actionUsers()
     {

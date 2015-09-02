@@ -7,7 +7,6 @@
 
 ?>
 
-<h1>Informations</h1>
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
